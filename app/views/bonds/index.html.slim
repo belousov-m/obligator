@@ -3,7 +3,7 @@
 
   table border="0"
     thead
-      th Короткое название
+      th Название
       th ISIN
       th Дата выплаты купона
       th Величина купона
@@ -13,7 +13,7 @@
     tbody
       - @bonds.each do |bond|
         tr
-          td = bond.shortname
+          td = bond.name
           td = bond.isin
           td = bond.coupon_date
           td = bond.coupon_value

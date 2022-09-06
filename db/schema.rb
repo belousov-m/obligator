@@ -11,16 +11,19 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2021_10_18_171518) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bonds", force: :cascade do |t|
     t.string "name"
     t.string "shortname"
     t.string "isin"
-    t.integer "face_value"
+    t.bigint "face_value"
     t.string "face_unit"
     t.integer "days_to_redemption"
     t.date "mat_date"
     t.date "coupon_date"
-    t.integer "coupon_value"
+    t.bigint "coupon_value"
     t.integer "coupon_percent"
     t.string "bond_type"
     t.string "type_name"

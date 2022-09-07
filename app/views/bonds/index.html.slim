@@ -1,4 +1,4 @@
-.bonds-list data-controller="hello"
+.bonds-list
   h1 Ближайшие выплаты купонов по облигациям
 
   table.table.table-light.table-striped.table-hover.mt-4
@@ -12,7 +12,7 @@
       th Тип облигации
     tbody
       - @bonds.each do |bond|
-        tr
+        tr data-controller="linkable" href=bond_path(bond)
           td = bond.name
           td = bond.isin
           td = bond.coupon_date

@@ -5,8 +5,9 @@
 
 import * as ActiveStorage from "@rails/activestorage"
 import "@hotwired/turbo-rails"
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "channels"
-import "assets/styles"
 
 ActiveStorage.start()
 
